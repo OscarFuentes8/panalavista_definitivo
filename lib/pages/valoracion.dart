@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:panalavista_definitivo/pages/Valoracion/my_comentarios.dart';
 import 'package:panalavista_definitivo/widgets/drawer.dart';
 
 class MyValoracion extends StatelessWidget {
@@ -32,7 +33,11 @@ class MyValoracion extends StatelessWidget {
           Icons.add_comment,
           size: 30,
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => ComentariosScreen(),
+          ));
+        },
       ),
     );
   }
