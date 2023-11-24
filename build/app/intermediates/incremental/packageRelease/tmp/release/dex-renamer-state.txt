@@ -1,0 +1,4 @@
+#Fri Nov 24 00:59:20 PET 2023
+base.0=C\:\\Users\\KEYNI\\OneDrive\\Documentos\\GitHub\\panalavista_definitivo\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
