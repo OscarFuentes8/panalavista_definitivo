@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class MyRegistroPage2 extends StatelessWidget {
   const MyRegistroPage2({super.key});
@@ -49,19 +50,13 @@ class MyRegistroPage2 extends StatelessWidget {
       width: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
       child: ElevatedButton(
-        onPressed: () {
-          _mostrarMensajeRegistro();
-        },
+        onPressed: () {},
         child: Text(
           "Registrar",
           style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
         ),
       ),
     );
-  }
-
-  void _mostrarMensajeRegistro() {
-    print("¡Usuario registrado!"); // Mensaje en la consola
   }
 
   Widget _textYourForm() {
@@ -82,7 +77,7 @@ class MyRegistroPage2 extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 40),
       child: TextField(
-        keyboardType: TextInputType.emailAddress,
+        keyboardType: TextInputType.text,
         decoration: InputDecoration(
             hintText: "Nombre", prefixIcon: Icon(Icons.person_outline)),
       ),
@@ -93,7 +88,7 @@ class MyRegistroPage2 extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 40),
       child: TextField(
-        keyboardType: TextInputType.emailAddress,
+        keyboardType: TextInputType.text,
         decoration: InputDecoration(
             hintText: "Apellido", prefixIcon: Icon(Icons.person_outline)),
       ),
@@ -104,7 +99,7 @@ class MyRegistroPage2 extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 40),
       child: TextField(
-        keyboardType: TextInputType.emailAddress,
+        keyboardType: TextInputType.number,
         decoration: InputDecoration(
             hintText: "Telefono", prefixIcon: Icon(Icons.call_outlined)),
       ),
@@ -114,8 +109,11 @@ class MyRegistroPage2 extends StatelessWidget {
   Widget _textFieldEmail() {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 40),
-      child: TextField(
+      child: TextFormField(
         keyboardType: TextInputType.emailAddress,
+        inputFormatters: [
+          FilteringTextInputFormatter.singleLineFormatter,
+        ],
         decoration: InputDecoration(
             hintText: "Correo electronico",
             prefixIcon: Icon(Icons.email_outlined)),
