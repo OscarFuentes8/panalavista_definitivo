@@ -32,6 +32,7 @@ class MyValoracion extends StatelessWidget {
         child: Icon(
           Icons.add_comment,
           size: 30,
+          color: Colors.white,
         ),
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(
